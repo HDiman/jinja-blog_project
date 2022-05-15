@@ -10,7 +10,7 @@ url_age = "https://api.agify.io/?name="
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index_2.html")
 
 @app.route("/guess/<name>")
 def guess(name):
@@ -27,7 +27,6 @@ def get_blog(num):
     response = requests.get(blog_url)
     all_posts = response.json()
     return render_template("blog.html", all_posts=all_posts, num_test=num)
-
 
 if __name__ == "__main__":
     app.run(debug=True)

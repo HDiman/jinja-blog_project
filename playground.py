@@ -10,7 +10,7 @@
 #     random_num = random.randint(0, 10)
 #     current_year = dt.datetime.now().year
 #
-#     return render_template("index.html", num=random_num, year=current_year)
+#     return render_template("index_2.html", num=random_num, year=current_year)
 #
 # if __name__ == "__main__":
 #     app.run(debug=True)
@@ -45,7 +45,7 @@ for item in all_posts:
 
 print(all_posts[0]['title'])
 
-{% for i in range(11) %}
-{{ i }}
-{% endfor %}
+# {% for i in range(11) %}
+# {{ i }}
+# {% endfor %}
 
