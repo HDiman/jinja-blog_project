@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
-<body>
-    <ul>
-        {% for item in all_posts %}
-            {% if item['id'] == 1 %}
-                <h2>{{ item['title'] }}</h2>
-                <h3>{{ item['subtitle'] }}</h3>
-                <p>{{ item['body'] }}</p>
-            {% endif %}
-        {% endfor %}
-        <a href="{{ url_for('home') }}">Go to Main Page</a>
-    </ul>
-</body>
+    <body>
+        <div class="wrapper">
+            <div class="top">
+                <div class="title"><h1>My Blog</h1></div>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <h1>{{ all_posts[num-1]['title'] }}</h1>
+                    <h2>{{ all_posts[num-1]['subtitle'] }}</h2>
+                    <p>{{ all_posts[num-1]['body'] }}</p>
+                    <a href="{{ url_for('home') }}">Go to Main Page</a>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
