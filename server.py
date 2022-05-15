@@ -10,7 +10,7 @@ url_age = "https://api.agify.io/?name="
 
 @app.route("/")
 def home():
-    return "Guessing program: add /guess/ here enter name"
+    return render_template("index.html")
 
 @app.route("/guess/<name>")
 def guess(name):
@@ -20,7 +20,7 @@ def guess(name):
     age = json.loads(url.text)['age']
     name = name.title()
 
-    return render_template("index.html", name=name, gender=gender, age=age)
+    return render_template("guess.html", name=name, gender=gender, age=age)
 
 
 if __name__ == "__main__":
