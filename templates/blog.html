@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <ul>
+        {% for item in all_posts %}
+            {% if item['id'] == 1 %}
+                <h2>{{ item['title'] }}</h2>
+                <h3>{{ item['subtitle'] }}</h3>
+                <p>{{ item['body'] }}</p>
+            {% endif %}
+        {% endfor %}
+        <a href="{{ url_for('home') }}">Go to Main Page</a>
+    </ul>
+</body>
+</html>

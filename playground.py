@@ -19,19 +19,33 @@
 
 import requests, json
 
-url_gender = "https://api.genderize.io?name="
-url_age = "https://api.agify.io/?name="
-name = "dima"
-print(name)
+# url_gender = "https://api.genderize.io?name="
+# url_age = "https://api.agify.io/?name="
+# name = "dima"
+# print(name)
+#
+# url = requests.get(url=url_gender + name)
+# data = json.loads(url.text)['gender']
+# print(data)
+#
+# url = requests.get(url=url_age + name)
+# data = json.loads(url.text)['age']
+# print(data)
 
-url = requests.get(url=url_gender + name)
-data = json.loads(url.text)['gender']
-print(data)
+# url = requests.get(url="https://api.npoint.io/c790b4d5cab58020d391")
+# data = json.loads(url.text)
+# for item in data:
+#     print(item)
 
-url = requests.get(url=url_age + name)
-data = json.loads(url.text)['age']
-print(data)
+blog_url = "https://api.npoint.io/c790b4d5cab58020d391"
+response = requests.get(blog_url)
+all_posts = response.json()
+for item in all_posts:
+    print(item)
 
+print(all_posts[0]['title'])
 
-
+{% for i in range(11) %}
+{{ i }}
+{% endfor %}
 
